@@ -19,14 +19,13 @@ for (i = 0; i < 2; i++) {
     console.log('done');
     appData.expenses[a] = b;
   } else {
-    var _a = prompt('Введите обязательную статью расходов в этом месяце', '');
-
-    var _b = prompt('Во сколько обойдется?', '');
+    console.log('Bad result');
+    i--;
   }
 }
 
 appData.moneyPerDay = appData.budget / 30;
-alert('Ежедневный бюджет: ' + appData.moneyPerDay);
+alert('Ежедневный бюджет: ' + appData.moneyPerDay + 'руб.');
 
 if (appData.moneyPerDay <= 100) {
   console.log("Минимальный уровень достатка");
